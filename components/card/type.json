@@ -1,0 +1,14 @@
+{
+  "connection": "default",
+  "collectionName": "components_card_types",
+  "info": {
+    "name": "type",
+    "icon": "credit-card"
+  },
+  "options": {},
+  "attributes": {
+    "type": {
+      "collection": "card-type"
+    }
+  }
+}

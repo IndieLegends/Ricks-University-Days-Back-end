@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/disease-transmissions",
+      "handler": "disease-transmission.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/disease-transmissions/count",
+      "handler": "disease-transmission.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/disease-transmissions/:id",
+      "handler": "disease-transmission.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/disease-transmissions",
+      "handler": "disease-transmission.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/disease-transmissions/:id",
+      "handler": "disease-transmission.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/disease-transmissions/:id",
+      "handler": "disease-transmission.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "kind": "collectionType",
+  "connection": "default",
+  "collectionName": "disease_treatments",
+  "info": {
+    "name": "disease_treatment"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    }
+  }
+}

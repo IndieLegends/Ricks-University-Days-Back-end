@@ -1,0 +1,19 @@
+{
+  "kind": "collectionType",
+  "connection": "default",
+  "collectionName": "disease_transmissions",
+  "info": {
+    "name": "disease_transmission"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    }
+  }
+}

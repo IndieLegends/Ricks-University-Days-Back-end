@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/disease-names",
+      "handler": "disease-name.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/disease-names/count",
+      "handler": "disease-name.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/disease-names/:id",
+      "handler": "disease-name.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/disease-names",
+      "handler": "disease-name.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/disease-names/:id",
+      "handler": "disease-name.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/disease-names/:id",
+      "handler": "disease-name.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

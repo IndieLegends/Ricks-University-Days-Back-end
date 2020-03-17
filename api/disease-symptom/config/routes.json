@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/disease-symptoms",
+      "handler": "disease-symptom.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/disease-symptoms/count",
+      "handler": "disease-symptom.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/disease-symptoms/:id",
+      "handler": "disease-symptom.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/disease-symptoms",
+      "handler": "disease-symptom.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/disease-symptoms/:id",
+      "handler": "disease-symptom.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/disease-symptoms/:id",
+      "handler": "disease-symptom.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

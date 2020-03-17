@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "connection": "default",
+  "collectionName": "diseases",
+  "info": {
+    "name": "disease"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "model": "disease-name"
+    },
+    "data": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.disease-data"
+    }
+  }
+}

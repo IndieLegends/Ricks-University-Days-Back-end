@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "connection": "default",
+  "collectionName": "cards",
+  "info": {
+    "name": "card"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "type": {
+      "type": "component",
+      "repeatable": false,
+      "component": "card.type"
+    },
+    "data": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.disease-data"
+    },
+    "reward": {
+      "type": "component",
+      "repeatable": true,
+      "component": "card.reward"
+    },
+    "visible": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    }
+  }
+}
