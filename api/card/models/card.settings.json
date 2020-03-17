@@ -10,16 +10,6 @@
     "timestamps": true
   },
   "attributes": {
-    "type": {
-      "type": "component",
-      "repeatable": false,
-      "component": "card.type"
-    },
-    "data": {
-      "type": "component",
-      "repeatable": false,
-      "component": "shared.disease-data"
-    },
     "reward": {
       "type": "component",
       "repeatable": true,
@@ -29,6 +19,16 @@
       "type": "boolean",
       "default": false,
       "required": true
+    },
+    "IsDeleted": {
+      "type": "boolean"
+    },
+    "Type": {
+      "type": "string"
+    },
+    "disease": {
+      "model": "disease",
+      "via": "cards"
     }
   }
 }

@@ -538,6 +538,52 @@
           },
           "name": {
             "type": "string"
+          },
+          "diseases": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "disease_causes": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "disease_symptoms": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "disease_transmissions": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "disease_treatments": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "cards": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
           }
         }
       },
@@ -548,6 +594,12 @@
         "properties": {
           "name": {
             "type": "string"
+          },
+          "diseases": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           }
         }
       }

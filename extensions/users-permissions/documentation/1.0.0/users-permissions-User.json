@@ -1242,8 +1242,23 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "Role": {
+                "type": "integer"
               }
             }
+          },
+          "last_name": {
+            "type": "string"
+          },
+          "first_name": {
+            "type": "string"
+          },
+          "phone_number": {
+            "type": "string"
+          },
+          "age": {
+            "type": "string"
           }
         }
       },
@@ -1280,6 +1295,18 @@
             "default": false
           },
           "role": {
+            "type": "string"
+          },
+          "last_name": {
+            "type": "string"
+          },
+          "first_name": {
+            "type": "string"
+          },
+          "phone_number": {
+            "type": "string"
+          },
+          "age": {
             "type": "string"
           }
         }

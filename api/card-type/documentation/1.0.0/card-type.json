@@ -529,27 +529,16 @@
     "schemas": {
       "Card-type": {
         "required": [
-          "id",
-          "name"
+          "id"
         ],
         "properties": {
           "id": {
-            "type": "string"
-          },
-          "name": {
             "type": "string"
           }
         }
       },
       "NewCard-type": {
-        "required": [
-          "name"
-        ],
-        "properties": {
-          "name": {
-            "type": "string"
-          }
-        }
+        "properties": {}
       }
     }
   },

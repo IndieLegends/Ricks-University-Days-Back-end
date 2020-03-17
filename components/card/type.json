@@ -6,9 +6,5 @@
     "icon": "credit-card"
   },
   "options": {},
-  "attributes": {
-    "type": {
-      "collection": "card-type"
-    }
-  }
+  "attributes": {}
 }

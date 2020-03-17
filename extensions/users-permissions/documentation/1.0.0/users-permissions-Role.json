@@ -608,9 +608,24 @@
                 },
                 "role": {
                   "type": "string"
+                },
+                "last_name": {
+                  "type": "string"
+                },
+                "first_name": {
+                  "type": "string"
+                },
+                "phone_number": {
+                  "type": "string"
+                },
+                "age": {
+                  "type": "string"
                 }
               }
             }
+          },
+          "Role": {
+            "type": "integer"
           }
         }
       },
@@ -640,6 +655,9 @@
             "items": {
               "type": "string"
             }
+          },
+          "Role": {
+            "type": "integer"
           }
         }
       }

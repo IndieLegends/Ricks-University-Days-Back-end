@@ -6,18 +6,5 @@
     "icon": "calendar-alt"
   },
   "options": {},
-  "attributes": {
-    "cause": {
-      "collection": "disease-cause"
-    },
-    "transmission": {
-      "collection": "disease-transmission"
-    },
-    "symptom": {
-      "collection": "disease-symptom"
-    },
-    "treatment": {
-      "collection": "disease-treatment"
-    }
-  }
+  "attributes": {}
 }

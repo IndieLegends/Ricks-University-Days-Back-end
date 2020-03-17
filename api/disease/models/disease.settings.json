@@ -13,10 +13,29 @@
     "name": {
       "model": "disease-name"
     },
-    "data": {
-      "type": "component",
-      "repeatable": false,
-      "component": "shared.disease-data"
+    "disease_causes": {
+      "collection": "disease-cause",
+      "via": "diseases",
+      "dominant": true
+    },
+    "disease_symptoms": {
+      "collection": "disease-symptom",
+      "via": "diseases",
+      "dominant": true
+    },
+    "disease_transmissions": {
+      "collection": "disease-transmission",
+      "via": "diseases",
+      "dominant": true
+    },
+    "disease_treatments": {
+      "collection": "disease-treatment",
+      "via": "diseases",
+      "dominant": true
+    },
+    "cards": {
+      "via": "disease",
+      "collection": "card"
     }
   }
 }
