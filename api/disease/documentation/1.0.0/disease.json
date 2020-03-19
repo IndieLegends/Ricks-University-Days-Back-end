@@ -533,9 +533,6 @@
               },
               "name": {
                 "type": "string"
-              },
-              "disease": {
-                "type": "string"
               }
             }
           },

@@ -12,8 +12,7 @@
   "attributes": {
     "name": {
       "unique": true,
-      "model": "disease-name",
-      "via": "disease"
+      "model": "disease-name"
     },
     "transmissions": {
       "collection": "disease-transmission",

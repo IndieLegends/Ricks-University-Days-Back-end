@@ -14,10 +14,6 @@
       "type": "string",
       "required": true,
       "unique": true
-    },
-    "disease": {
-      "via": "name",
-      "model": "disease"
     }
   }
 }
