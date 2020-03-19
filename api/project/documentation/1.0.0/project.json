@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/disease-symptoms": {
+    "/projects": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -10,10 +10,9 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Project"
                   }
                 }
               }
@@ -52,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Disease-symptom"
+          "Project"
         ],
         "parameters": [
           {
@@ -202,11 +201,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
+                  "$ref": "#/components/schemas/Project"
                 }
               }
             }
@@ -244,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Disease-symptom"
+          "Project"
         ],
         "requestBody": {
           "description": "",
@@ -252,14 +247,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewDisease-symptom"
+                "$ref": "#/components/schemas/NewProject"
               }
             }
           }
         }
       }
     },
-    "/disease-symptoms/count": {
+    "/projects/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -270,8 +265,8 @@
               "application/json": {
                 "schema": {
                   "properties": {
-                    "foo": {
-                      "type": "string"
+                    "count": {
+                      "type": "integer"
                     }
                   }
                 }
@@ -311,12 +306,12 @@
         },
         "summary": "",
         "tags": [
-          "Disease-symptom"
+          "Project"
         ],
         "parameters": []
       }
     },
-    "/disease-symptoms/{id}": {
+    "/projects/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -326,11 +321,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
+                  "$ref": "#/components/schemas/Project"
                 }
               }
             }
@@ -368,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Disease-symptom"
+          "Project"
         ],
         "parameters": [
           {
@@ -392,11 +383,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
+                  "$ref": "#/components/schemas/Project"
                 }
               }
             }
@@ -434,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Disease-symptom"
+          "Project"
         ],
         "requestBody": {
           "description": "",
@@ -442,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewDisease-symptom"
+                "$ref": "#/components/schemas/NewProject"
               }
             }
           }
@@ -508,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Disease-symptom"
+          "Project"
         ],
         "parameters": [
           {
@@ -527,77 +514,101 @@
   },
   "components": {
     "schemas": {
-      "Disease-symptom": {
+      "Project": {
         "required": [
           "id",
-          "name"
+          "gold",
+          "honor",
+          "passion",
+          "visible"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
           "name": {
-            "type": "string"
-          },
-          "diseases": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "causes": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "transmissions": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "symptoms": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "treatments": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                }
+            "required": [
+              "id",
+              "name"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
               }
             }
+          },
+          "type": {
+            "required": [
+              "id",
+              "name"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              }
+            }
+          },
+          "gold": {
+            "type": "integer",
+            "default": 0
+          },
+          "honor": {
+            "type": "integer",
+            "default": 0
+          },
+          "passion": {
+            "type": "integer",
+            "default": 0
+          },
+          "visible": {
+            "type": "boolean",
+            "default": false
           }
         }
       },
-      "NewDisease-symptom": {
+      "NewProject": {
         "required": [
-          "name"
+          "gold",
+          "honor",
+          "passion",
+          "visible"
         ],
         "properties": {
           "name": {
             "type": "string"
           },
-          "diseases": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
+          "type": {
+            "type": "string"
+          },
+          "gold": {
+            "type": "integer",
+            "default": 0
+          },
+          "honor": {
+            "type": "integer",
+            "default": 0
+          },
+          "passion": {
+            "type": "integer",
+            "default": 0
+          },
+          "visible": {
+            "type": "boolean",
+            "default": false
           }
         }
       }
     }
   },
-  "tags": []
+  "tags": [
+    {
+      "name": "Project"
+    }
+  ]
 }

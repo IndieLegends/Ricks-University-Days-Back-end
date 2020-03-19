@@ -1,9 +1,9 @@
 {
   "kind": "collectionType",
   "connection": "default",
-  "collectionName": "disease_causes",
+  "collectionName": "project_types",
   "info": {
-    "name": "disease_cause"
+    "name": "project_type"
   },
   "options": {
     "increments": true,
@@ -14,10 +14,6 @@
       "type": "string",
       "required": true,
       "unique": true
-    },
-    "diseases": {
-      "via": "causes",
-      "collection": "disease"
     }
   }
 }

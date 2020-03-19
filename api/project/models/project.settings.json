@@ -1,26 +1,20 @@
 {
   "kind": "collectionType",
   "connection": "default",
-  "collectionName": "cards",
+  "collectionName": "projects",
   "info": {
-    "name": "card"
+    "name": "project"
   },
   "options": {
     "increments": true,
     "timestamps": true
   },
   "attributes": {
-    "cause": {
-      "model": "disease-cause"
+    "name": {
+      "model": "disease-name"
     },
-    "transmission": {
-      "model": "disease-transmission"
-    },
-    "symptom": {
-      "model": "disease-symptom"
-    },
-    "treatment": {
-      "model": "disease-treatment"
+    "type": {
+      "model": "project-type"
     },
     "gold": {
       "type": "integer",
@@ -33,11 +27,11 @@
       "default": 0
     },
     "passion": {
-      "required": true,
       "type": "integer",
+      "required": true,
       "default": 0
     },
-    "isdeleted": {
+    "visible": {
       "type": "boolean",
       "default": false,
       "required": true

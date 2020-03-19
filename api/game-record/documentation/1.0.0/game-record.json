@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/disease-symptoms": {
+    "/game-records": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -52,7 +52,7 @@
         },
         "summary": "",
         "tags": [
-          "Disease-symptom"
+          "Game-record"
         ],
         "parameters": [
           {
@@ -244,7 +244,7 @@
         },
         "summary": "",
         "tags": [
-          "Disease-symptom"
+          "Game-record"
         ],
         "requestBody": {
           "description": "",
@@ -252,14 +252,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewDisease-symptom"
+                "$ref": "#/components/schemas/NewGame-record"
               }
             }
           }
         }
       }
     },
-    "/disease-symptoms/count": {
+    "/game-records/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -311,12 +311,12 @@
         },
         "summary": "",
         "tags": [
-          "Disease-symptom"
+          "Game-record"
         ],
         "parameters": []
       }
     },
-    "/disease-symptoms/{id}": {
+    "/game-records/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -368,7 +368,7 @@
         },
         "summary": "",
         "tags": [
-          "Disease-symptom"
+          "Game-record"
         ],
         "parameters": [
           {
@@ -434,7 +434,7 @@
         },
         "summary": "",
         "tags": [
-          "Disease-symptom"
+          "Game-record"
         ],
         "requestBody": {
           "description": "",
@@ -442,7 +442,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewDisease-symptom"
+                "$ref": "#/components/schemas/NewGame-record"
               }
             }
           }
@@ -508,7 +508,7 @@
         },
         "summary": "",
         "tags": [
-          "Disease-symptom"
+          "Game-record"
         ],
         "parameters": [
           {
@@ -527,73 +527,43 @@
   },
   "components": {
     "schemas": {
-      "Disease-symptom": {
+      "Game-record": {
         "required": [
           "id",
-          "name"
+          "game_number",
+          "action",
+          "reaction"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "name": {
+          "game_number": {
+            "type": "integer"
+          },
+          "action": {
             "type": "string"
           },
-          "diseases": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "causes": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "transmissions": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "symptoms": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "treatments": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                }
-              }
-            }
+          "reaction": {
+            "type": "string"
           }
         }
       },
-      "NewDisease-symptom": {
+      "NewGame-record": {
         "required": [
-          "name"
+          "game_number",
+          "action",
+          "reaction"
         ],
         "properties": {
-          "name": {
+          "game_number": {
+            "type": "integer"
+          },
+          "action": {
             "type": "string"
           },
-          "diseases": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
+          "reaction": {
+            "type": "string"
           }
         }
       }

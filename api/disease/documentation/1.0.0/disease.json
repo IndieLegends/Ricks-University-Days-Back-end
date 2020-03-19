@@ -524,15 +524,19 @@
           },
           "name": {
             "required": [
-              "id"
+              "id",
+              "name"
             ],
             "properties": {
               "id": {
                 "type": "string"
+              },
+              "name": {
+                "type": "string"
               }
             }
           },
-          "disease_causes": {
+          "causes": {
             "type": "array",
             "items": {
               "required": [
@@ -555,7 +559,7 @@
               }
             }
           },
-          "disease_symptoms": {
+          "transmissions": {
             "type": "array",
             "items": {
               "required": [
@@ -578,7 +582,7 @@
               }
             }
           },
-          "disease_transmissions": {
+          "symptoms": {
             "type": "array",
             "items": {
               "required": [
@@ -601,7 +605,7 @@
               }
             }
           },
-          "disease_treatments": {
+          "treatments": {
             "type": "array",
             "items": {
               "required": [
@@ -620,35 +624,6 @@
                   "items": {
                     "type": "string"
                   }
-                }
-              }
-            }
-          },
-          "cards": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "visible"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "reward": {
-                  "type": "component"
-                },
-                "visible": {
-                  "type": "boolean"
-                },
-                "IsDeleted": {
-                  "type": "boolean"
-                },
-                "Type": {
-                  "type": "string"
-                },
-                "disease": {
-                  "type": "string"
                 }
               }
             }
@@ -660,31 +635,25 @@
           "name": {
             "type": "string"
           },
-          "disease_causes": {
+          "causes": {
             "type": "array",
             "items": {
               "type": "string"
             }
           },
-          "disease_symptoms": {
+          "transmissions": {
             "type": "array",
             "items": {
               "type": "string"
             }
           },
-          "disease_transmissions": {
+          "symptoms": {
             "type": "array",
             "items": {
               "type": "string"
             }
           },
-          "disease_treatments": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "cards": {
+          "treatments": {
             "type": "array",
             "items": {
               "type": "string"

@@ -16,7 +16,7 @@
       "unique": true
     },
     "diseases": {
-      "via": "disease_transmissions",
+      "via": "transmissions",
       "collection": "disease"
     }
   }

@@ -552,31 +552,25 @@
                 "name": {
                   "type": "string"
                 },
-                "disease_causes": {
+                "causes": {
                   "type": "array",
                   "items": {
                     "type": "string"
                   }
                 },
-                "disease_symptoms": {
+                "transmissions": {
                   "type": "array",
                   "items": {
                     "type": "string"
                   }
                 },
-                "disease_transmissions": {
+                "symptoms": {
                   "type": "array",
                   "items": {
                     "type": "string"
                   }
                 },
-                "disease_treatments": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "cards": {
+                "treatments": {
                   "type": "array",
                   "items": {
                     "type": "string"

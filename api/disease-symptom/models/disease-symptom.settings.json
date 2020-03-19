@@ -16,7 +16,7 @@
       "unique": true
     },
     "diseases": {
-      "via": "disease_symptoms",
+      "via": "symptoms",
       "collection": "disease"
     }
   }

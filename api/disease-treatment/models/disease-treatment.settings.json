@@ -16,7 +16,7 @@
       "unique": true
     },
     "diseases": {
-      "via": "disease_treatments",
+      "via": "treatments",
       "collection": "disease"
     }
   }

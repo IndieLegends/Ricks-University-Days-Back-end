@@ -517,57 +517,19 @@
       "Card": {
         "required": [
           "id",
-          "visible"
+          "gold",
+          "honor",
+          "passion",
+          "isdeleted"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "reward": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "required": [
-                "id",
-                "value"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "nut": {
-                  "required": [
-                    "id",
-                    "name"
-                  ],
-                  "properties": {
-                    "id": {
-                      "type": "string"
-                    },
-                    "name": {
-                      "type": "string"
-                    }
-                  }
-                },
-                "value": {
-                  "type": "integer"
-                }
-              }
-            }
-          },
-          "visible": {
-            "type": "boolean",
-            "default": false
-          },
-          "IsDeleted": {
-            "type": "boolean"
-          },
-          "Type": {
-            "type": "string"
-          },
-          "disease": {
+          "cause": {
             "required": [
-              "id"
+              "id",
+              "name"
             ],
             "properties": {
               "id": {
@@ -576,89 +538,127 @@
               "name": {
                 "type": "string"
               },
-              "disease_causes": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "disease_symptoms": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "disease_transmissions": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "disease_treatments": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "cards": {
+              "diseases": {
                 "type": "array",
                 "items": {
                   "type": "string"
                 }
               }
             }
+          },
+          "transmission": {
+            "required": [
+              "id",
+              "name"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "diseases": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "symptom": {
+            "required": [
+              "id",
+              "name"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "diseases": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "treatment": {
+            "required": [
+              "id",
+              "name"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "diseases": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "gold": {
+            "type": "integer",
+            "default": 0
+          },
+          "honor": {
+            "type": "integer",
+            "default": 0
+          },
+          "passion": {
+            "type": "integer",
+            "default": 0
+          },
+          "isdeleted": {
+            "type": "boolean",
+            "default": false
           }
         }
       },
       "NewCard": {
         "required": [
-          "visible"
+          "gold",
+          "honor",
+          "passion",
+          "isdeleted"
         ],
         "properties": {
-          "reward": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "required": [
-                "id",
-                "value"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "nut": {
-                  "required": [
-                    "id",
-                    "name"
-                  ],
-                  "properties": {
-                    "id": {
-                      "type": "string"
-                    },
-                    "name": {
-                      "type": "string"
-                    }
-                  }
-                },
-                "value": {
-                  "type": "integer"
-                }
-              }
-            }
+          "cause": {
+            "type": "string"
           },
-          "visible": {
+          "transmission": {
+            "type": "string"
+          },
+          "symptom": {
+            "type": "string"
+          },
+          "treatment": {
+            "type": "string"
+          },
+          "gold": {
+            "type": "integer",
+            "default": 0
+          },
+          "honor": {
+            "type": "integer",
+            "default": 0
+          },
+          "passion": {
+            "type": "integer",
+            "default": 0
+          },
+          "isdeleted": {
             "type": "boolean",
             "default": false
-          },
-          "IsDeleted": {
-            "type": "boolean"
-          },
-          "Type": {
-            "type": "string"
-          },
-          "disease": {
-            "type": "string"
           }
         }
       }

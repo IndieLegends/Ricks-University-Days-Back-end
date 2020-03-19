@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "connection": "default",
+  "collectionName": "game_records",
+  "info": {
+    "name": "game_record"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "game_number": {
+      "type": "integer",
+      "required": true,
+      "unique": true
+    },
+    "action": {
+      "type": "string",
+      "required": true,
+      "unique": false
+    },
+    "reaction": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

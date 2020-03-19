@@ -1,23 +1,24 @@
 {
   "kind": "collectionType",
   "connection": "default",
-  "collectionName": "disease_causes",
+  "collectionName": "questions",
   "info": {
-    "name": "disease_cause"
+    "name": "question"
   },
   "options": {
     "increments": true,
     "timestamps": true
   },
   "attributes": {
-    "name": {
+    "question": {
       "type": "string",
       "required": true,
       "unique": true
     },
-    "diseases": {
-      "via": "causes",
-      "collection": "disease"
+    "answer": {
+      "type": "string",
+      "required": true,
+      "unique": true
     }
   }
 }

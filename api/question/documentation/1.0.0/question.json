@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/disease-symptoms": {
+    "/questions": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -10,10 +10,9 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Question"
                   }
                 }
               }
@@ -52,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Disease-symptom"
+          "Question"
         ],
         "parameters": [
           {
@@ -202,11 +201,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
+                  "$ref": "#/components/schemas/Question"
                 }
               }
             }
@@ -244,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Disease-symptom"
+          "Question"
         ],
         "requestBody": {
           "description": "",
@@ -252,14 +247,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewDisease-symptom"
+                "$ref": "#/components/schemas/NewQuestion"
               }
             }
           }
         }
       }
     },
-    "/disease-symptoms/count": {
+    "/questions/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -270,8 +265,8 @@
               "application/json": {
                 "schema": {
                   "properties": {
-                    "foo": {
-                      "type": "string"
+                    "count": {
+                      "type": "integer"
                     }
                   }
                 }
@@ -311,12 +306,12 @@
         },
         "summary": "",
         "tags": [
-          "Disease-symptom"
+          "Question"
         ],
         "parameters": []
       }
     },
-    "/disease-symptoms/{id}": {
+    "/questions/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -326,11 +321,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
+                  "$ref": "#/components/schemas/Question"
                 }
               }
             }
@@ -368,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Disease-symptom"
+          "Question"
         ],
         "parameters": [
           {
@@ -392,11 +383,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
+                  "$ref": "#/components/schemas/Question"
                 }
               }
             }
@@ -434,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Disease-symptom"
+          "Question"
         ],
         "requestBody": {
           "description": "",
@@ -442,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewDisease-symptom"
+                "$ref": "#/components/schemas/NewQuestion"
               }
             }
           }
@@ -508,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Disease-symptom"
+          "Question"
         ],
         "parameters": [
           {
@@ -527,77 +514,43 @@
   },
   "components": {
     "schemas": {
-      "Disease-symptom": {
+      "Question": {
         "required": [
           "id",
-          "name"
+          "question",
+          "answer"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "name": {
+          "question": {
             "type": "string"
           },
-          "diseases": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "causes": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "transmissions": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "symptoms": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "treatments": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                }
-              }
-            }
+          "answer": {
+            "type": "string"
           }
         }
       },
-      "NewDisease-symptom": {
+      "NewQuestion": {
         "required": [
-          "name"
+          "question",
+          "answer"
         ],
         "properties": {
-          "name": {
+          "question": {
             "type": "string"
           },
-          "diseases": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
+          "answer": {
+            "type": "string"
           }
         }
       }
     }
   },
-  "tags": []
+  "tags": [
+    {
+      "name": "Question"
+    }
+  ]
 }

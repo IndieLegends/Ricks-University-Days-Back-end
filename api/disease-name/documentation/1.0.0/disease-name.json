@@ -529,16 +529,27 @@
     "schemas": {
       "Disease-name": {
         "required": [
-          "id"
+          "id",
+          "name"
         ],
         "properties": {
           "id": {
+            "type": "string"
+          },
+          "name": {
             "type": "string"
           }
         }
       },
       "NewDisease-name": {
-        "properties": {}
+        "required": [
+          "name"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          }
+        }
       }
     }
   },

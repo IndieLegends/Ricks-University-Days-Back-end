@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/disease-symptoms": {
+    "/project-types": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -52,7 +52,7 @@
         },
         "summary": "",
         "tags": [
-          "Disease-symptom"
+          "Project-type"
         ],
         "parameters": [
           {
@@ -244,7 +244,7 @@
         },
         "summary": "",
         "tags": [
-          "Disease-symptom"
+          "Project-type"
         ],
         "requestBody": {
           "description": "",
@@ -252,14 +252,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewDisease-symptom"
+                "$ref": "#/components/schemas/NewProject-type"
               }
             }
           }
         }
       }
     },
-    "/disease-symptoms/count": {
+    "/project-types/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -311,12 +311,12 @@
         },
         "summary": "",
         "tags": [
-          "Disease-symptom"
+          "Project-type"
         ],
         "parameters": []
       }
     },
-    "/disease-symptoms/{id}": {
+    "/project-types/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -368,7 +368,7 @@
         },
         "summary": "",
         "tags": [
-          "Disease-symptom"
+          "Project-type"
         ],
         "parameters": [
           {
@@ -434,7 +434,7 @@
         },
         "summary": "",
         "tags": [
-          "Disease-symptom"
+          "Project-type"
         ],
         "requestBody": {
           "description": "",
@@ -442,7 +442,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewDisease-symptom"
+                "$ref": "#/components/schemas/NewProject-type"
               }
             }
           }
@@ -508,7 +508,7 @@
         },
         "summary": "",
         "tags": [
-          "Disease-symptom"
+          "Project-type"
         ],
         "parameters": [
           {
@@ -527,7 +527,7 @@
   },
   "components": {
     "schemas": {
-      "Disease-symptom": {
+      "Project-type": {
         "required": [
           "id",
           "name"
@@ -538,62 +538,16 @@
           },
           "name": {
             "type": "string"
-          },
-          "diseases": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "causes": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "transmissions": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "symptoms": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "treatments": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                }
-              }
-            }
           }
         }
       },
-      "NewDisease-symptom": {
+      "NewProject-type": {
         "required": [
           "name"
         ],
         "properties": {
           "name": {
             "type": "string"
-          },
-          "diseases": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
           }
         }
       }
