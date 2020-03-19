@@ -537,19 +537,8 @@
               },
               "name": {
                 "type": "string"
-              }
-            }
-          },
-          "type": {
-            "required": [
-              "id",
-              "name"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
               },
-              "name": {
+              "disease": {
                 "type": "string"
               }
             }
@@ -569,6 +558,9 @@
           "visible": {
             "type": "boolean",
             "default": false
+          },
+          "type": {
+            "type": "integer"
           }
         }
       },
@@ -583,9 +575,6 @@
           "name": {
             "type": "string"
           },
-          "type": {
-            "type": "string"
-          },
           "gold": {
             "type": "integer",
             "default": 0
@@ -601,6 +590,9 @@
           "visible": {
             "type": "boolean",
             "default": false
+          },
+          "type": {
+            "type": "integer"
           }
         }
       }

@@ -15,9 +15,9 @@
       "required": true,
       "unique": true
     },
-    "diseases": {
+    "disease": {
       "via": "causes",
-      "collection": "disease"
+      "model": "disease"
     }
   }
 }

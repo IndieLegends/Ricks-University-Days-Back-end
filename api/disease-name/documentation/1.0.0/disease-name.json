@@ -538,6 +538,43 @@
           },
           "name": {
             "type": "string"
+          },
+          "disease": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "transmissions": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "symptoms": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "treatments": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "causes": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
           }
         }
       },
@@ -547,6 +584,9 @@
         ],
         "properties": {
           "name": {
+            "type": "string"
+          },
+          "disease": {
             "type": "string"
           }
         }

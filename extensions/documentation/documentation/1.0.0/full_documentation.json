@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "03/19/2020 6:24:14 PM"
+    "x-generation-date": "03/19/2020 7:29:28 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -7938,11 +7938,8 @@
               "name": {
                 "type": "string"
               },
-              "diseases": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
+              "disease": {
+                "type": "string"
               }
             }
           },
@@ -7958,11 +7955,8 @@
               "name": {
                 "type": "string"
               },
-              "diseases": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
+              "disease": {
+                "type": "string"
               }
             }
           },
@@ -7978,11 +7972,8 @@
               "name": {
                 "type": "string"
               },
-              "diseases": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
+              "disease": {
+                "type": "string"
               }
             }
           },
@@ -7998,11 +7989,8 @@
               "name": {
                 "type": "string"
               },
-              "diseases": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
+              "disease": {
+                "type": "string"
               }
             }
           },
@@ -8074,42 +8062,39 @@
           "name": {
             "type": "string"
           },
-          "diseases": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
+          "disease": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "transmissions": {
+                "type": "array",
+                "items": {
                   "type": "string"
-                },
-                "name": {
+                }
+              },
+              "symptoms": {
+                "type": "array",
+                "items": {
                   "type": "string"
-                },
-                "causes": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "transmissions": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "symptoms": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "treatments": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
+                }
+              },
+              "treatments": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "causes": {
+                "type": "array",
+                "items": {
+                  "type": "string"
                 }
               }
             }
@@ -8124,11 +8109,8 @@
           "name": {
             "type": "string"
           },
-          "diseases": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
+          "disease": {
+            "type": "string"
           }
         }
       },
@@ -8143,6 +8125,43 @@
           },
           "name": {
             "type": "string"
+          },
+          "disease": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "transmissions": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "symptoms": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "treatments": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "causes": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
           }
         }
       },
@@ -8152,6 +8171,9 @@
         ],
         "properties": {
           "name": {
+            "type": "string"
+          },
+          "disease": {
             "type": "string"
           }
         }
@@ -8168,42 +8190,39 @@
           "name": {
             "type": "string"
           },
-          "diseases": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
+          "disease": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "transmissions": {
+                "type": "array",
+                "items": {
                   "type": "string"
-                },
-                "name": {
+                }
+              },
+              "symptoms": {
+                "type": "array",
+                "items": {
                   "type": "string"
-                },
-                "causes": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "transmissions": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "symptoms": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "treatments": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
+                }
+              },
+              "treatments": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "causes": {
+                "type": "array",
+                "items": {
+                  "type": "string"
                 }
               }
             }
@@ -8218,11 +8237,8 @@
           "name": {
             "type": "string"
           },
-          "diseases": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
+          "disease": {
+            "type": "string"
           }
         }
       },
@@ -8238,42 +8254,39 @@
           "name": {
             "type": "string"
           },
-          "diseases": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
+          "disease": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "transmissions": {
+                "type": "array",
+                "items": {
                   "type": "string"
-                },
-                "name": {
+                }
+              },
+              "symptoms": {
+                "type": "array",
+                "items": {
                   "type": "string"
-                },
-                "causes": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "transmissions": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "symptoms": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "treatments": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
+                }
+              },
+              "treatments": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "causes": {
+                "type": "array",
+                "items": {
+                  "type": "string"
                 }
               }
             }
@@ -8288,11 +8301,8 @@
           "name": {
             "type": "string"
           },
-          "diseases": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
+          "disease": {
+            "type": "string"
           }
         }
       },
@@ -8308,42 +8318,39 @@
           "name": {
             "type": "string"
           },
-          "diseases": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
+          "disease": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "transmissions": {
+                "type": "array",
+                "items": {
                   "type": "string"
-                },
-                "name": {
+                }
+              },
+              "symptoms": {
+                "type": "array",
+                "items": {
                   "type": "string"
-                },
-                "causes": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "transmissions": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "symptoms": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "treatments": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
+                }
+              },
+              "treatments": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "causes": {
+                "type": "array",
+                "items": {
+                  "type": "string"
                 }
               }
             }
@@ -8358,11 +8365,8 @@
           "name": {
             "type": "string"
           },
-          "diseases": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
+          "disease": {
+            "type": "string"
           }
         }
       },
@@ -8385,29 +8389,9 @@
               },
               "name": {
                 "type": "string"
-              }
-            }
-          },
-          "causes": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "name"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "diseases": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                }
+              },
+              "disease": {
+                "type": "string"
               }
             }
           },
@@ -8425,11 +8409,8 @@
                 "name": {
                   "type": "string"
                 },
-                "diseases": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
+                "disease": {
+                  "type": "string"
                 }
               }
             }
@@ -8448,11 +8429,8 @@
                 "name": {
                   "type": "string"
                 },
-                "diseases": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
+                "disease": {
+                  "type": "string"
                 }
               }
             }
@@ -8471,11 +8449,28 @@
                 "name": {
                   "type": "string"
                 },
-                "diseases": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
+                "disease": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "causes": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "name"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "disease": {
+                  "type": "string"
                 }
               }
             }
@@ -8487,12 +8482,6 @@
           "name": {
             "type": "string"
           },
-          "causes": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
           "transmissions": {
             "type": "array",
             "items": {
@@ -8506,6 +8495,12 @@
             }
           },
           "treatments": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "causes": {
             "type": "array",
             "items": {
               "type": "string"
@@ -8600,19 +8595,8 @@
               },
               "name": {
                 "type": "string"
-              }
-            }
-          },
-          "type": {
-            "required": [
-              "id",
-              "name"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
               },
-              "name": {
+              "disease": {
                 "type": "string"
               }
             }
@@ -8632,6 +8616,9 @@
           "visible": {
             "type": "boolean",
             "default": false
+          },
+          "type": {
+            "type": "integer"
           }
         }
       },
@@ -8646,9 +8633,6 @@
           "name": {
             "type": "string"
           },
-          "type": {
-            "type": "string"
-          },
           "gold": {
             "type": "integer",
             "default": 0
@@ -8664,6 +8648,9 @@
           "visible": {
             "type": "boolean",
             "default": false
+          },
+          "type": {
+            "type": "integer"
           }
         }
       },
@@ -8788,9 +8775,24 @@
                 },
                 "role": {
                   "type": "string"
+                },
+                "last_name": {
+                  "type": "string"
+                },
+                "first_name": {
+                  "type": "string"
+                },
+                "phone_number": {
+                  "type": "string"
+                },
+                "age": {
+                  "type": "string"
                 }
               }
             }
+          },
+          "Role": {
+            "type": "integer"
           }
         }
       },
@@ -8820,6 +8822,9 @@
             "items": {
               "type": "string"
             }
+          },
+          "Role": {
+            "type": "integer"
           }
         }
       },
@@ -8881,8 +8886,23 @@
                 "items": {
                   "type": "string"
                 }
+              },
+              "Role": {
+                "type": "integer"
               }
             }
+          },
+          "last_name": {
+            "type": "string"
+          },
+          "first_name": {
+            "type": "string"
+          },
+          "phone_number": {
+            "type": "string"
+          },
+          "age": {
+            "type": "string"
           }
         }
       },
@@ -8919,6 +8939,18 @@
             "default": false
           },
           "role": {
+            "type": "string"
+          },
+          "last_name": {
+            "type": "string"
+          },
+          "first_name": {
+            "type": "string"
+          },
+          "phone_number": {
+            "type": "string"
+          },
+          "age": {
             "type": "string"
           }
         }

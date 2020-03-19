@@ -538,11 +538,8 @@
               "name": {
                 "type": "string"
               },
-              "diseases": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
+              "disease": {
+                "type": "string"
               }
             }
           },
@@ -558,11 +555,8 @@
               "name": {
                 "type": "string"
               },
-              "diseases": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
+              "disease": {
+                "type": "string"
               }
             }
           },
@@ -578,11 +572,8 @@
               "name": {
                 "type": "string"
               },
-              "diseases": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
+              "disease": {
+                "type": "string"
               }
             }
           },
@@ -598,11 +589,8 @@
               "name": {
                 "type": "string"
               },
-              "diseases": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
+              "disease": {
+                "type": "string"
               }
             }
           },

@@ -13,9 +13,6 @@
     "name": {
       "model": "disease-name"
     },
-    "type": {
-      "model": "project-type"
-    },
     "gold": {
       "type": "integer",
       "required": true,
@@ -35,6 +32,9 @@
       "type": "boolean",
       "default": false,
       "required": true
+    },
+    "type": {
+      "type": "integer"
     }
   }
 }

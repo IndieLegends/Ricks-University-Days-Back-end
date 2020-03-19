@@ -12,27 +12,24 @@
   "attributes": {
     "name": {
       "unique": true,
-      "model": "disease-name"
-    },
-    "causes": {
-      "collection": "disease-cause",
-      "via": "diseases",
-      "dominant": true
+      "model": "disease-name",
+      "via": "disease"
     },
     "transmissions": {
       "collection": "disease-transmission",
-      "via": "diseases",
-      "dominant": true
+      "via": "disease"
     },
     "symptoms": {
       "collection": "disease-symptom",
-      "via": "diseases",
-      "dominant": true
+      "via": "disease"
     },
     "treatments": {
       "collection": "disease-treatment",
-      "via": "diseases",
-      "dominant": true
+      "via": "disease"
+    },
+    "causes": {
+      "collection": "disease-cause",
+      "via": "disease"
     }
   }
 }
