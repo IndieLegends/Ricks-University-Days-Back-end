@@ -559,45 +559,47 @@
           "type": {
             "type": "integer"
           },
-          "user_info": {
-            "required": [
-              "id",
-              "money",
-              "passion",
-              "honor",
-              "nickname1",
-              "nickname2"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "cards": {
-                "type": "array",
-                "items": {
+          "user_infos": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "nickname",
+                "money",
+                "honor",
+                "passion"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "nickname": {
+                  "type": "string"
+                },
+                "cards": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "projects": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "money": {
+                  "type": "integer"
+                },
+                "honor": {
+                  "type": "integer"
+                },
+                "passion": {
+                  "type": "integer"
+                },
+                "user": {
                   "type": "string"
                 }
-              },
-              "projects": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "money": {
-                "type": "integer"
-              },
-              "passion": {
-                "type": "integer"
-              },
-              "honor": {
-                "type": "integer"
-              },
-              "nickname1": {
-                "type": "string"
-              },
-              "nickname2": {
-                "type": "string"
               }
             }
           }
@@ -633,8 +635,11 @@
           "type": {
             "type": "integer"
           },
-          "user_info": {
-            "type": "string"
+          "user_infos": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           }
         }
       }

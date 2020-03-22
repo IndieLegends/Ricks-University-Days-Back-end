@@ -36,9 +36,9 @@
     "type": {
       "type": "integer"
     },
-    "user_info": {
+    "user_infos": {
       "via": "projects",
-      "model": "user-info"
+      "collection": "user-info"
     }
   }
 }

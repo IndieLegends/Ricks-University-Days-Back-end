@@ -42,9 +42,9 @@
       "default": false,
       "required": true
     },
-    "user_info": {
+    "user_infos": {
       "via": "cards",
-      "model": "user-info"
+      "collection": "user-info"
     }
   }
 }

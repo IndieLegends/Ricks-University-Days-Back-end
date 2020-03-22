@@ -10,34 +10,36 @@
     "timestamps": true
   },
   "attributes": {
+    "nickname": {
+      "type": "string",
+      "required": true,
+      "unique": false
+    },
     "cards": {
       "collection": "card",
-      "via": "user_info"
+      "via": "user_infos",
+      "dominant": true
     },
     "projects": {
       "collection": "project",
-      "via": "user_info"
+      "via": "user_infos",
+      "dominant": true
     },
     "money": {
       "type": "integer",
-      "required": true
-    },
-    "passion": {
-      "type": "integer",
-      "unique": false,
       "required": true
     },
     "honor": {
       "type": "integer",
       "required": true
     },
-    "nickname1": {
-      "type": "string",
+    "passion": {
+      "type": "integer",
       "required": true
     },
-    "nickname2": {
-      "type": "string",
-      "required": true
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user"
     }
   }
 }

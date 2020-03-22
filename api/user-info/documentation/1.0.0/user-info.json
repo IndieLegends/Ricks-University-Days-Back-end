@@ -530,14 +530,16 @@
       "User-info": {
         "required": [
           "id",
+          "nickname",
           "money",
-          "passion",
           "honor",
-          "nickname1",
-          "nickname2"
+          "passion"
         ],
         "properties": {
           "id": {
+            "type": "string"
+          },
+          "nickname": {
             "type": "string"
           },
           "cards": {
@@ -578,8 +580,11 @@
                 "isdeleted": {
                   "type": "boolean"
                 },
-                "user_info": {
-                  "type": "string"
+                "user_infos": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 }
               }
             }
@@ -616,8 +621,11 @@
                 "type": {
                   "type": "integer"
                 },
-                "user_info": {
-                  "type": "string"
+                "user_infos": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 }
               }
             }
@@ -625,29 +633,73 @@
           "money": {
             "type": "integer"
           },
-          "passion": {
-            "type": "integer"
-          },
           "honor": {
             "type": "integer"
           },
-          "nickname1": {
-            "type": "string"
+          "passion": {
+            "type": "integer"
           },
-          "nickname2": {
-            "type": "string"
+          "user": {
+            "required": [
+              "id",
+              "username",
+              "email"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "username": {
+                "type": "string"
+              },
+              "email": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "password": {
+                "type": "string"
+              },
+              "resetPasswordToken": {
+                "type": "string"
+              },
+              "confirmed": {
+                "type": "boolean"
+              },
+              "blocked": {
+                "type": "boolean"
+              },
+              "role": {
+                "type": "string"
+              },
+              "last_name": {
+                "type": "string"
+              },
+              "first_name": {
+                "type": "string"
+              },
+              "phone_number": {
+                "type": "string"
+              },
+              "age": {
+                "type": "string"
+              }
+            }
           }
         }
       },
       "NewUser-info": {
         "required": [
+          "nickname",
           "money",
-          "passion",
           "honor",
-          "nickname1",
-          "nickname2"
+          "passion"
         ],
         "properties": {
+          "nickname": {
+            "type": "string"
+          },
           "cards": {
             "type": "array",
             "items": {
@@ -663,16 +715,13 @@
           "money": {
             "type": "integer"
           },
-          "passion": {
-            "type": "integer"
-          },
           "honor": {
             "type": "integer"
           },
-          "nickname1": {
-            "type": "string"
+          "passion": {
+            "type": "integer"
           },
-          "nickname2": {
+          "user": {
             "type": "string"
           }
         }
