@@ -41,6 +41,10 @@
       "type": "boolean",
       "default": false,
       "required": true
+    },
+    "user_info": {
+      "via": "cards",
+      "model": "user-info"
     }
   }
 }

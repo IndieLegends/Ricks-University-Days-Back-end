@@ -35,6 +35,10 @@
     },
     "type": {
       "type": "integer"
+    },
+    "user_info": {
+      "via": "projects",
+      "model": "user-info"
     }
   }
 }

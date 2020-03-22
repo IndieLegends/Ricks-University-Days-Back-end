@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/projects": {
+    "/user-infos": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -10,9 +10,10 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Project"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
                   }
                 }
               }
@@ -51,7 +52,7 @@
         },
         "summary": "",
         "tags": [
-          "Project"
+          "User-info"
         ],
         "parameters": [
           {
@@ -201,72 +202,9 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Project"
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Project"
-        ],
-        "requestBody": {
-          "description": "",
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/NewProject"
-              }
-            }
-          }
-        }
-      }
-    },
-    "/projects/count": {
-      "get": {
-        "deprecated": false,
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
                   "properties": {
-                    "count": {
-                      "type": "integer"
+                    "foo": {
+                      "type": "string"
                     }
                   }
                 }
@@ -306,12 +244,22 @@
         },
         "summary": "",
         "tags": [
-          "Project"
+          "User-info"
         ],
-        "parameters": []
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewUser-info"
+              }
+            }
+          }
+        }
       }
     },
-    "/projects/{id}": {
+    "/user-infos/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -321,7 +269,11 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Project"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
                 }
               }
             }
@@ -359,7 +311,64 @@
         },
         "summary": "",
         "tags": [
-          "Project"
+          "User-info"
+        ],
+        "parameters": []
+      }
+    },
+    "/user-infos/{id}": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "User-info"
         ],
         "parameters": [
           {
@@ -383,7 +392,11 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Project"
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
                 }
               }
             }
@@ -421,7 +434,7 @@
         },
         "summary": "",
         "tags": [
-          "Project"
+          "User-info"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +442,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewProject"
+                "$ref": "#/components/schemas/NewUser-info"
               }
             }
           }
@@ -495,7 +508,7 @@
         },
         "summary": "",
         "tags": [
-          "Project"
+          "User-info"
         ],
         "parameters": [
           {
@@ -514,135 +527,157 @@
   },
   "components": {
     "schemas": {
-      "Project": {
+      "User-info": {
         "required": [
           "id",
-          "gold",
-          "honor",
+          "money",
           "passion",
-          "visible"
+          "honor",
+          "nickname1",
+          "nickname2"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "name": {
-            "required": [
-              "id",
-              "name"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
+          "cards": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "gold",
+                "honor",
+                "passion",
+                "isdeleted"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "cause": {
+                  "type": "string"
+                },
+                "transmission": {
+                  "type": "string"
+                },
+                "symptom": {
+                  "type": "string"
+                },
+                "treatment": {
+                  "type": "string"
+                },
+                "gold": {
+                  "type": "integer"
+                },
+                "honor": {
+                  "type": "integer"
+                },
+                "passion": {
+                  "type": "integer"
+                },
+                "isdeleted": {
+                  "type": "boolean"
+                },
+                "user_info": {
+                  "type": "string"
+                }
               }
             }
           },
-          "gold": {
-            "type": "integer",
-            "default": 0
+          "projects": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "gold",
+                "honor",
+                "passion",
+                "visible"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "gold": {
+                  "type": "integer"
+                },
+                "honor": {
+                  "type": "integer"
+                },
+                "passion": {
+                  "type": "integer"
+                },
+                "visible": {
+                  "type": "boolean"
+                },
+                "type": {
+                  "type": "integer"
+                },
+                "user_info": {
+                  "type": "string"
+                }
+              }
+            }
           },
-          "honor": {
-            "type": "integer",
-            "default": 0
-          },
-          "passion": {
-            "type": "integer",
-            "default": 0
-          },
-          "visible": {
-            "type": "boolean",
-            "default": false
-          },
-          "type": {
+          "money": {
             "type": "integer"
           },
-          "user_info": {
-            "required": [
-              "id",
-              "money",
-              "passion",
-              "honor",
-              "nickname1",
-              "nickname2"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "cards": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "projects": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "money": {
-                "type": "integer"
-              },
-              "passion": {
-                "type": "integer"
-              },
-              "honor": {
-                "type": "integer"
-              },
-              "nickname1": {
-                "type": "string"
-              },
-              "nickname2": {
-                "type": "string"
-              }
-            }
+          "passion": {
+            "type": "integer"
+          },
+          "honor": {
+            "type": "integer"
+          },
+          "nickname1": {
+            "type": "string"
+          },
+          "nickname2": {
+            "type": "string"
           }
         }
       },
-      "NewProject": {
+      "NewUser-info": {
         "required": [
-          "gold",
-          "honor",
+          "money",
           "passion",
-          "visible"
+          "honor",
+          "nickname1",
+          "nickname2"
         ],
         "properties": {
-          "name": {
-            "type": "string"
+          "cards": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
-          "gold": {
-            "type": "integer",
-            "default": 0
+          "projects": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
-          "honor": {
-            "type": "integer",
-            "default": 0
-          },
-          "passion": {
-            "type": "integer",
-            "default": 0
-          },
-          "visible": {
-            "type": "boolean",
-            "default": false
-          },
-          "type": {
+          "money": {
             "type": "integer"
           },
-          "user_info": {
+          "passion": {
+            "type": "integer"
+          },
+          "honor": {
+            "type": "integer"
+          },
+          "nickname1": {
+            "type": "string"
+          },
+          "nickname2": {
             "type": "string"
           }
         }
       }
     }
   },
-  "tags": [
-    {
-      "name": "Project"
-    }
-  ]
+  "tags": []
 }

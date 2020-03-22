@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "connection": "default",
+  "collectionName": "user_infos",
+  "info": {
+    "name": "user_info"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "cards": {
+      "collection": "card",
+      "via": "user_info"
+    },
+    "projects": {
+      "collection": "project",
+      "via": "user_info"
+    },
+    "money": {
+      "type": "integer",
+      "required": true
+    },
+    "passion": {
+      "type": "integer",
+      "unique": false,
+      "required": true
+    },
+    "honor": {
+      "type": "integer",
+      "required": true
+    },
+    "nickname1": {
+      "type": "string",
+      "required": true
+    },
+    "nickname2": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

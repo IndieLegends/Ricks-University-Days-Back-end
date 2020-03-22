@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/projects": {
+    "/characters": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -12,7 +12,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Project"
+                    "$ref": "#/components/schemas/Character"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Project"
+          "Character"
         ],
         "parameters": [
           {
@@ -201,7 +201,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Project"
+                  "$ref": "#/components/schemas/Character"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Project"
+          "Character"
         ],
         "requestBody": {
           "description": "",
@@ -247,14 +247,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewProject"
+                "$ref": "#/components/schemas/NewCharacter"
               }
             }
           }
         }
       }
     },
-    "/projects/count": {
+    "/characters/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -306,12 +306,12 @@
         },
         "summary": "",
         "tags": [
-          "Project"
+          "Character"
         ],
         "parameters": []
       }
     },
-    "/projects/{id}": {
+    "/characters/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -321,7 +321,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Project"
+                  "$ref": "#/components/schemas/Character"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Project"
+          "Character"
         ],
         "parameters": [
           {
@@ -383,7 +383,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Project"
+                  "$ref": "#/components/schemas/Character"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Project"
+          "Character"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewProject"
+                "$ref": "#/components/schemas/NewCharacter"
               }
             }
           }
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Project"
+          "Character"
         ],
         "parameters": [
           {
@@ -514,19 +514,23 @@
   },
   "components": {
     "schemas": {
-      "Project": {
+      "Character": {
         "required": [
           "id",
-          "gold",
-          "honor",
-          "passion",
-          "visible"
+          "name",
+          "description"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
           "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "victory_nut": {
             "required": [
               "id",
               "name"
@@ -539,101 +543,22 @@
                 "type": "string"
               }
             }
-          },
-          "gold": {
-            "type": "integer",
-            "default": 0
-          },
-          "honor": {
-            "type": "integer",
-            "default": 0
-          },
-          "passion": {
-            "type": "integer",
-            "default": 0
-          },
-          "visible": {
-            "type": "boolean",
-            "default": false
-          },
-          "type": {
-            "type": "integer"
-          },
-          "user_info": {
-            "required": [
-              "id",
-              "money",
-              "passion",
-              "honor",
-              "nickname1",
-              "nickname2"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "cards": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "projects": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "money": {
-                "type": "integer"
-              },
-              "passion": {
-                "type": "integer"
-              },
-              "honor": {
-                "type": "integer"
-              },
-              "nickname1": {
-                "type": "string"
-              },
-              "nickname2": {
-                "type": "string"
-              }
-            }
           }
         }
       },
-      "NewProject": {
+      "NewCharacter": {
         "required": [
-          "gold",
-          "honor",
-          "passion",
-          "visible"
+          "name",
+          "description"
         ],
         "properties": {
           "name": {
             "type": "string"
           },
-          "gold": {
-            "type": "integer",
-            "default": 0
+          "description": {
+            "type": "string"
           },
-          "honor": {
-            "type": "integer",
-            "default": 0
-          },
-          "passion": {
-            "type": "integer",
-            "default": 0
-          },
-          "visible": {
-            "type": "boolean",
-            "default": false
-          },
-          "type": {
-            "type": "integer"
-          },
-          "user_info": {
+          "victory_nut": {
             "type": "string"
           }
         }
@@ -642,7 +567,7 @@
   },
   "tags": [
     {
-      "name": "Project"
+      "name": "Character"
     }
   ]
 }

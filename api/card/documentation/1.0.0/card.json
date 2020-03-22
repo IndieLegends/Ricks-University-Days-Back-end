@@ -609,6 +609,48 @@
           "isdeleted": {
             "type": "boolean",
             "default": false
+          },
+          "user_info": {
+            "required": [
+              "id",
+              "money",
+              "passion",
+              "honor",
+              "nickname1",
+              "nickname2"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "cards": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "projects": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "money": {
+                "type": "integer"
+              },
+              "passion": {
+                "type": "integer"
+              },
+              "honor": {
+                "type": "integer"
+              },
+              "nickname1": {
+                "type": "string"
+              },
+              "nickname2": {
+                "type": "string"
+              }
+            }
           }
         }
       },
@@ -647,6 +689,9 @@
           "isdeleted": {
             "type": "boolean",
             "default": false
+          },
+          "user_info": {
+            "type": "string"
           }
         }
       }

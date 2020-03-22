@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/projects": {
+    "/nuts": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -12,7 +12,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Project"
+                    "$ref": "#/components/schemas/Nut"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Project"
+          "Nut"
         ],
         "parameters": [
           {
@@ -201,7 +201,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Project"
+                  "$ref": "#/components/schemas/Nut"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Project"
+          "Nut"
         ],
         "requestBody": {
           "description": "",
@@ -247,14 +247,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewProject"
+                "$ref": "#/components/schemas/NewNut"
               }
             }
           }
         }
       }
     },
-    "/projects/count": {
+    "/nuts/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -306,12 +306,12 @@
         },
         "summary": "",
         "tags": [
-          "Project"
+          "Nut"
         ],
         "parameters": []
       }
     },
-    "/projects/{id}": {
+    "/nuts/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -321,7 +321,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Project"
+                  "$ref": "#/components/schemas/Nut"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Project"
+          "Nut"
         ],
         "parameters": [
           {
@@ -383,7 +383,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Project"
+                  "$ref": "#/components/schemas/Nut"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Project"
+          "Nut"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewProject"
+                "$ref": "#/components/schemas/NewNut"
               }
             }
           }
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Project"
+          "Nut"
         ],
         "parameters": [
           {
@@ -514,126 +514,26 @@
   },
   "components": {
     "schemas": {
-      "Project": {
+      "Nut": {
         "required": [
           "id",
-          "gold",
-          "honor",
-          "passion",
-          "visible"
+          "name"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
           "name": {
-            "required": [
-              "id",
-              "name"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              }
-            }
-          },
-          "gold": {
-            "type": "integer",
-            "default": 0
-          },
-          "honor": {
-            "type": "integer",
-            "default": 0
-          },
-          "passion": {
-            "type": "integer",
-            "default": 0
-          },
-          "visible": {
-            "type": "boolean",
-            "default": false
-          },
-          "type": {
-            "type": "integer"
-          },
-          "user_info": {
-            "required": [
-              "id",
-              "money",
-              "passion",
-              "honor",
-              "nickname1",
-              "nickname2"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "cards": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "projects": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "money": {
-                "type": "integer"
-              },
-              "passion": {
-                "type": "integer"
-              },
-              "honor": {
-                "type": "integer"
-              },
-              "nickname1": {
-                "type": "string"
-              },
-              "nickname2": {
-                "type": "string"
-              }
-            }
+            "type": "string"
           }
         }
       },
-      "NewProject": {
+      "NewNut": {
         "required": [
-          "gold",
-          "honor",
-          "passion",
-          "visible"
+          "name"
         ],
         "properties": {
           "name": {
-            "type": "string"
-          },
-          "gold": {
-            "type": "integer",
-            "default": 0
-          },
-          "honor": {
-            "type": "integer",
-            "default": 0
-          },
-          "passion": {
-            "type": "integer",
-            "default": 0
-          },
-          "visible": {
-            "type": "boolean",
-            "default": false
-          },
-          "type": {
-            "type": "integer"
-          },
-          "user_info": {
             "type": "string"
           }
         }
@@ -642,7 +542,7 @@
   },
   "tags": [
     {
-      "name": "Project"
+      "name": "Nut"
     }
   ]
 }
