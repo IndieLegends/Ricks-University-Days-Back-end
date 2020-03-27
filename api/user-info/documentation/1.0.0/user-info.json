@@ -530,10 +530,7 @@
       "User-info": {
         "required": [
           "id",
-          "nickname",
-          "money",
-          "honor",
-          "passion"
+          "nickname"
         ],
         "properties": {
           "id": {
@@ -686,15 +683,33 @@
                 "type": "string"
               }
             }
+          },
+          "character": {
+            "required": [
+              "id",
+              "name",
+              "description"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "victory_nut": {
+                "type": "string"
+              }
+            }
           }
         }
       },
       "NewUser-info": {
         "required": [
-          "nickname",
-          "money",
-          "honor",
-          "passion"
+          "nickname"
         ],
         "properties": {
           "nickname": {
@@ -722,6 +737,9 @@
             "type": "integer"
           },
           "user": {
+            "type": "string"
+          },
+          "character": {
             "type": "string"
           }
         }

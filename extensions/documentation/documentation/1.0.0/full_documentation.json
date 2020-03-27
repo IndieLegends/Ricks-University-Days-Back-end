@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "03/22/2020 5:56:19 PM"
+    "x-generation-date": "03/27/2020 2:05:00 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -9561,10 +9561,7 @@
             "items": {
               "required": [
                 "id",
-                "nickname",
-                "money",
-                "honor",
-                "passion"
+                "nickname"
               ],
               "properties": {
                 "id": {
@@ -9595,6 +9592,9 @@
                   "type": "integer"
                 },
                 "user": {
+                  "type": "string"
+                },
+                "character": {
                   "type": "string"
                 }
               }
@@ -10248,10 +10248,7 @@
             "items": {
               "required": [
                 "id",
-                "nickname",
-                "money",
-                "honor",
-                "passion"
+                "nickname"
               ],
               "properties": {
                 "id": {
@@ -10282,6 +10279,9 @@
                   "type": "integer"
                 },
                 "user": {
+                  "type": "string"
+                },
+                "character": {
                   "type": "string"
                 }
               }
@@ -10362,10 +10362,7 @@
       "User-info": {
         "required": [
           "id",
-          "nickname",
-          "money",
-          "honor",
-          "passion"
+          "nickname"
         ],
         "properties": {
           "id": {
@@ -10518,15 +10515,33 @@
                 "type": "string"
               }
             }
+          },
+          "character": {
+            "required": [
+              "id",
+              "name",
+              "description"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "victory_nut": {
+                "type": "string"
+              }
+            }
           }
         }
       },
       "NewUser-info": {
         "required": [
-          "nickname",
-          "money",
-          "honor",
-          "passion"
+          "nickname"
         ],
         "properties": {
           "nickname": {
@@ -10554,6 +10569,9 @@
             "type": "integer"
           },
           "user": {
+            "type": "string"
+          },
+          "character": {
             "type": "string"
           }
         }

@@ -564,10 +564,7 @@
             "items": {
               "required": [
                 "id",
-                "nickname",
-                "money",
-                "honor",
-                "passion"
+                "nickname"
               ],
               "properties": {
                 "id": {
@@ -598,6 +595,9 @@
                   "type": "integer"
                 },
                 "user": {
+                  "type": "string"
+                },
+                "character": {
                   "type": "string"
                 }
               }

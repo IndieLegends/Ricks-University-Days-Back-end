@@ -11,6 +11,7 @@
   },
   "devDependencies": {},
   "dependencies": {
+    "@hapi/joi": "^17.1.1",
     "knex": "<0.20.0",
     "sqlite3": "latest",
     "strapi": "3.0.0-beta.19.3",

@@ -27,19 +27,22 @@
     },
     "money": {
       "type": "integer",
-      "required": true
+      "required": false
     },
     "honor": {
       "type": "integer",
-      "required": true
+      "required": false
     },
     "passion": {
       "type": "integer",
-      "required": true
+      "required": false
     },
     "user": {
       "plugin": "users-permissions",
       "model": "user"
+    },
+    "character": {
+      "model": "character"
     }
   }
 }
