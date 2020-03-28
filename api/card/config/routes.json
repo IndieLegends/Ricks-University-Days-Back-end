@@ -18,6 +18,14 @@
     },
     {
       "method": "GET",
+      "path": "/cards/random",
+      "handler": "card.random",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
       "path": "/cards/:id",
       "handler": "card.findOne",
       "config": {
