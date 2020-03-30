@@ -65,6 +65,10 @@
     },
     "age": {
       "type": "string"
+    },
+    "nickname": {
+      "type": "string",
+      "unique": false
     }
   }
 }

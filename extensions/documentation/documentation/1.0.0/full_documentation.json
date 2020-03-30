@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "03/28/2020 11:24:52 AM"
+    "x-generation-date": "03/30/2020 12:04:31 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -9705,10 +9705,10 @@
                 "passion": {
                   "type": "integer"
                 },
-                "user": {
+                "character": {
                   "type": "string"
                 },
-                "character": {
+                "username": {
                   "type": "string"
                 }
               }
@@ -10392,10 +10392,10 @@
                 "passion": {
                   "type": "integer"
                 },
-                "user": {
+                "character": {
                   "type": "string"
                 },
-                "character": {
+                "username": {
                   "type": "string"
                 }
               }
@@ -10582,54 +10582,6 @@
           "passion": {
             "type": "integer"
           },
-          "user": {
-            "required": [
-              "id",
-              "username",
-              "email"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "username": {
-                "type": "string"
-              },
-              "email": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "password": {
-                "type": "string"
-              },
-              "resetPasswordToken": {
-                "type": "string"
-              },
-              "confirmed": {
-                "type": "boolean"
-              },
-              "blocked": {
-                "type": "boolean"
-              },
-              "role": {
-                "type": "string"
-              },
-              "last_name": {
-                "type": "string"
-              },
-              "first_name": {
-                "type": "string"
-              },
-              "phone_number": {
-                "type": "string"
-              },
-              "age": {
-                "type": "string"
-              }
-            }
-          },
           "character": {
             "required": [
               "id",
@@ -10650,6 +10602,9 @@
                 "type": "string"
               }
             }
+          },
+          "username": {
+            "type": "string"
           }
         }
       },
@@ -10682,10 +10637,10 @@
           "passion": {
             "type": "integer"
           },
-          "user": {
+          "character": {
             "type": "string"
           },
-          "character": {
+          "username": {
             "type": "string"
           }
         }
@@ -10790,6 +10745,9 @@
                   "type": "string"
                 },
                 "age": {
+                  "type": "string"
+                },
+                "nickname": {
                   "type": "string"
                 }
               }
@@ -10907,6 +10865,9 @@
           },
           "age": {
             "type": "string"
+          },
+          "nickname": {
+            "type": "string"
           }
         }
       },
@@ -10955,6 +10916,9 @@
             "type": "string"
           },
           "age": {
+            "type": "string"
+          },
+          "nickname": {
             "type": "string"
           }
         }

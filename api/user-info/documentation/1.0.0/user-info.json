@@ -636,54 +636,6 @@
           "passion": {
             "type": "integer"
           },
-          "user": {
-            "required": [
-              "id",
-              "username",
-              "email"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "username": {
-                "type": "string"
-              },
-              "email": {
-                "type": "string"
-              },
-              "provider": {
-                "type": "string"
-              },
-              "password": {
-                "type": "string"
-              },
-              "resetPasswordToken": {
-                "type": "string"
-              },
-              "confirmed": {
-                "type": "boolean"
-              },
-              "blocked": {
-                "type": "boolean"
-              },
-              "role": {
-                "type": "string"
-              },
-              "last_name": {
-                "type": "string"
-              },
-              "first_name": {
-                "type": "string"
-              },
-              "phone_number": {
-                "type": "string"
-              },
-              "age": {
-                "type": "string"
-              }
-            }
-          },
           "character": {
             "required": [
               "id",
@@ -704,6 +656,9 @@
                 "type": "string"
               }
             }
+          },
+          "username": {
+            "type": "string"
           }
         }
       },
@@ -736,10 +691,10 @@
           "passion": {
             "type": "integer"
           },
-          "user": {
+          "character": {
             "type": "string"
           },
-          "character": {
+          "username": {
             "type": "string"
           }
         }

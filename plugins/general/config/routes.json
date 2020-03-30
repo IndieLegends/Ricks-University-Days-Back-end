@@ -1,0 +1,12 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/random",
+      "handler": "General.random",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

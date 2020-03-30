@@ -651,10 +651,10 @@
                 "passion": {
                   "type": "integer"
                 },
-                "user": {
+                "character": {
                   "type": "string"
                 },
-                "character": {
+                "username": {
                   "type": "string"
                 }
               }

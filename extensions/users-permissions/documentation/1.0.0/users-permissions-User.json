@@ -1259,6 +1259,9 @@
           },
           "age": {
             "type": "string"
+          },
+          "nickname": {
+            "type": "string"
           }
         }
       },
@@ -1307,6 +1310,9 @@
             "type": "string"
           },
           "age": {
+            "type": "string"
+          },
+          "nickname": {
             "type": "string"
           }
         }

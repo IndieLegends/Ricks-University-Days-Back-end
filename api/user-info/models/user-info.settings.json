@@ -37,12 +37,12 @@
       "type": "integer",
       "required": false
     },
-    "user": {
-      "plugin": "users-permissions",
-      "model": "user"
-    },
     "character": {
       "model": "character"
+    },
+    "username": {
+      "type": "string",
+      "unique": true
     }
   }
 }

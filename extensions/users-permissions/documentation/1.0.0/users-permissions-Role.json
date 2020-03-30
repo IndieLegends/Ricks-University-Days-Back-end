@@ -620,6 +620,9 @@
                 },
                 "age": {
                   "type": "string"
+                },
+                "nickname": {
+                  "type": "string"
                 }
               }
             }
