@@ -1,5 +1,5 @@
 'use strict';
-const {createSchema} = require("./joi-schema");
+const {createSchema} = require("./joi_schema");
 
 module.exports = {
 
