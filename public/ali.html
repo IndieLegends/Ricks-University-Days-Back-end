@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>bakery</title>
+  </head>
+  <body>
+    <!-- add socket.io script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.js"></script>
+    <script>
+      // connect user throught socket
+      var socket = io.connect('http://localhost:1337');
+      // listen for event name 'hello' & log it
+      socket.on('hello', (res) => console.log(res));
+    </script>
+  </body>
+</html>
