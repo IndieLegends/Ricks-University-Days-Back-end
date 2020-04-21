@@ -1,5 +1,5 @@
 'use strict';
-
+require("../../server.js");
 /**
  * An asynchronous bootstrap function that runs before
  * your application gets started.
